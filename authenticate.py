@@ -21,7 +21,7 @@ def authenticateFAR(text, user, comp):
 					flag = 'f'
 					imp += 1.0
 
-			if flag == 'f' and imp >= 0.8*len(kht):
+			if flag == 'f' and imp >= 0.9*len(kht):
 				FAR += 1.0
 			total += 1.0
 

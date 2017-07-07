@@ -28,3 +28,16 @@ def generateComparatorFRR(text, user):
 	st = [statistics.stdev(list(lst)) for lst in zip(*all_kht)]
 	comp = [(m - s, m + s) for m, s in zip(mn, st)]
 	return comp
+
+if __name__ == '__main__':
+	
+	import pylab
+	import scipy.stats as stats
+
+	all_kht = extractKeyHoldTime(1, 1)
+	kht = [list(lst) for lst in zip(*all_kht)]
+	kht = [i/10000 for i in kht[9]]
+	stats.probplot(kht, dist="norm", plot=pylab)
+	pylab.ylabel('Observation quantiles (*10^4)')
+	pylab.title('')	
+	pylab.show()
