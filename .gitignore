@@ -1,0 +1,8 @@
+bin/
+lib/
+__pycache__/
+userData/
+processedData/
+pip-selfcheck.json
+plots.py
+*.pyc
