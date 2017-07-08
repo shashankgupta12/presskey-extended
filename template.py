@@ -38,6 +38,6 @@ if __name__ == '__main__':
 	kht = [list(lst) for lst in zip(*all_kht)]
 	kht = [i/10000 for i in kht[9]]
 	stats.probplot(kht, dist="norm", plot=pylab)
-	pylab.ylabel('Observation quantiles (*10^4)')
+	pylab.ylabel('Observation quantiles (*10^4)(microseconds)')
 	pylab.title('')	
 	pylab.show()
